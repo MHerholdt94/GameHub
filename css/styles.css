@@ -1,7 +1,7 @@
 /* Global  */
 body {
   font-family: "Europa", Arial, Helvetica, sans-serif;
-  max-width: 1500px;
+  max-width: 1520px;
   margin: auto;
 }
 
@@ -24,6 +24,7 @@ i {
   padding: 10px 20px;
   font-size: 1.1em;
   border-radius: 10px;
+  box-shadow: 0px 3px 1px #6e571a;
 }
 
 input[type="text"] {
@@ -42,7 +43,7 @@ header {
 }
 
 .search {
-  padding: 12px 358px 12px 12px;
+  padding: 12px 200px 12px 12px;
   margin: auto;
   border-width: 2px;
   border-color: #1d2540;
@@ -54,7 +55,7 @@ header {
 .navigation ul {
   display: grid;
   grid-template-columns: repeat(5, auto);
-  grid-gap: 10px;
+  grid-gap: 25px;
   font-size: 1.1em;
 }
 
@@ -84,6 +85,7 @@ header {
 .back {
   margin-top: 50px;
   background: #484d64;
+  box-shadow: 0px 5px 5px #b9c4ce;
 }
 
 .back i {
@@ -91,6 +93,10 @@ header {
   color: #fff;
   font-size: 1.8em;
   padding: 15px;
+}
+
+.hamburger-menu {
+  display: none;
 }
 
 /* Advertisement */
@@ -105,6 +111,7 @@ header {
   background: #1d2540;
   border: 10px solid #8c6f23;
   padding: 15px;
+  margin: auto 15px;
 }
 
 .market h2 {
@@ -137,9 +144,14 @@ header {
   float: right;
 }
 
+.visit:hover {
+  background: #8c6f23;
+}
+
 .news {
   background: #b9c4ce;
-  padding: 0px 20px;
+  padding: 10px;
+  margin: auto 15px;
 }
 
 .news h2 {
@@ -154,16 +166,34 @@ div img {
   max-width: 250px;
 }
 
-.product-nav ul {
-  display: flex;
-  justify-content: space-around;
-  font-size: 1.2em;
+.product-nav {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   margin: 100px auto;
+  font-size: 1.3em;
+}
+
+.product-nav a {
+  display: grid;
+  place-items: center;
 }
 
 .product-nav i {
   font-size: 2em;
-  color: black;
+  color: #0d0d0d;
+}
+
+.product-nav a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #0d0d0d;
+  transition: 0.3s;
+}
+
+.product-nav a:hover::after {
+  width: 35%;
+  transition: 0.3s;
 }
 
 /* Product lists */
@@ -173,6 +203,7 @@ div img {
   text-align: center;
   padding: 10px;
   text-transform: uppercase;
+  box-shadow: 0px 3px 2px #b9c4ce;
 }
 
 .sale__header {
@@ -182,27 +213,26 @@ div img {
 .products__list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-}
-
-.product {
   margin: 50px auto;
 }
 
-.product h2,
-.product p {
-  margin: auto;
+.product {
+  width: 83.5%;
+  margin: auto 20px;
 }
 
 .price {
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
 
 .sale .price {
   text-decoration: line-through;
+  font-size: 1.1em;
+  margin-left: 10px;
 }
 
 .sale__price {
-  font-size: 1.5em;
+  font-size: 1.8em;
   color: red;
 }
 
@@ -213,23 +243,306 @@ div img {
 /* Footer */
 footer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  font-size: 1.2em;
-  padding: 100px 0px 50px 0px;
-  border-radius: 30% 30% 0 0;
-  background: #1d2540;
+  grid-template-columns: repeat(7, auto);
+  margin: 75px auto;
+  padding-top: 25px;
   color: #b9c4ce;
-}
-
-footer div {
-  margin: auto;
+  border-top: 1px solid #1d2540;
 }
 
 footer h3 {
-  position: relative;
-  left: 38px;
+  text-transform: uppercase;
 }
 
 footer a {
-  color: #b9c4ce;
+  color: #1d2540;
+}
+
+footer img {
+  max-width: 100px;
+}
+
+footer a:hover {
+  border-bottom: 1px solid #1d2540;
+}
+
+/* -- Media Queries -- */
+
+/* Mobile */
+@media (max-width: 650px) {
+  header {
+    background: #b9c4ce;
+    margin: auto;
+    height: 80px;
+  }
+
+  .product__header {
+    margin: auto;
+  }
+
+  .logo {
+    max-width: 100px;
+    padding: 7px;
+  }
+
+  .product img {
+    max-width: 100px;
+  }
+
+  .product {
+    font-size: 12px;
+    margin: 10px auto;
+    max-width: 100px;
+  }
+
+  .product h2 {
+    margin: auto;
+  }
+
+  .product .cta {
+    display: inline;
+    float: none;
+    padding: 5px 13px;
+  }
+
+  .product span {
+    font-size: 20px;
+  }
+
+  .products__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    margin: 20px auto;
+  }
+
+  footer {
+    grid-template-columns: 1fr auto;
+  }
+
+  .market {
+    margin: 0 0 25px 25px;
+    font-size: 0.7em;
+  }
+
+  .market p {
+    margin: 10px 0;
+  }
+
+  /* Removed for mobile */
+
+  .back,
+  .search,
+  .social-nav,
+  .market i,
+  .news,
+  .navigation,
+  .product-nav,
+  .sale .price,
+  footer p {
+    display: none;
+  }
+
+  .copyright,
+  footer img {
+    display: block;
+    margin-left: 20px;
+  }
+
+  /* The hamburger menu code is found in an article from march 2021 on infoens.com (with a few changes) */
+  .hamburger-menu {
+    display: block;
+  }
+
+  .menulist {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin-right: 0px;
+    background: #b9c4ce;
+    top: 60px;
+    padding-top: 50px;
+    text-align: center;
+    transition: 0.5s;
+    right: -120%;
+  }
+
+  .ham-menu {
+    display: block;
+  }
+
+  .menulist {
+    display: block;
+    margin-right: 0px;
+  }
+
+  .menulist li a {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .menulist li {
+    padding: 20px;
+  }
+
+  .check:checked~.menulist {
+    right: 0;
+  }
+
+  #hamburger__checkbox {
+    display: none;
+  }
+
+  .hamburger-menu i {
+    float: right;
+    font-size: 2.5em;
+    margin: 15px;
+  }
+
+  .check:checked~.ham-menu .menuline {
+    transform: rotate(135deg);
+    transition: 0.3s ease;
+  }
+
+  .check:checked~.ham-menu .menuline::before,
+  .check:checked~.ham-menu .menuline::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+}
+
+/* Tablet */
+@media (min-width: 651px) and (max-width: 1480px) {
+  header {
+    margin: auto;
+    height: 130px;
+  }
+
+  .logo {
+    max-width: 175px;
+    padding: 7px;
+  }
+
+  .navigation {
+    display: flex;
+  }
+
+  .search {
+    flex: auto;
+    padding: 10px 15px;
+    margin: 27px auto;
+  }
+
+  .market {
+    margin: 0 0 0 25px;
+    max-height: 375px;
+  }
+
+  .market h2 {
+    max-width: 100%;
+  }
+
+  .market p {
+    margin: 25px 15px;
+  }
+
+  .news {
+    margin: 0 25px 0 0;
+    max-height: 425px;
+    overflow: auto;
+  }
+
+  .products__list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 92%;
+  }
+
+  .product img {
+    max-width: 200px;
+  }
+
+  .product {
+    max-width: 200px;
+    margin: 25px;
+  }
+
+  footer {
+    grid-template-columns: auto 1fr;
+  }
+
+  /* Removed for tablet */
+
+  .social-nav,
+  .back,
+  .navigation a,
+  footer p,
+  .market i {
+    display: none;
+  }
+
+  .copyright {
+    display: block;
+  }
+
+  /* The hamburger menu code is found in an article from march 2021 on infoens.com (with a few changes) */
+  .hamburger-menu {
+    display: block;
+  }
+
+  .menulist {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin-right: 0px;
+    background: #b9c4ce;
+    top: 120px;
+    padding-top: 50px;
+    text-align: center;
+    transition: 0.5s;
+    right: -120%;
+  }
+
+  .ham-menu {
+    display: block;
+  }
+
+  .menulist {
+    display: block;
+    margin-right: 0px;
+  }
+
+  .menulist li a {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .menulist li {
+    padding: 20px;
+  }
+
+  .check:checked~.menulist {
+    right: 0;
+  }
+
+  #hamburger__checkbox {
+    display: none;
+  }
+
+  .hamburger-menu i {
+    float: right;
+    font-size: 3em;
+    margin: 25px;
+  }
+
+  .check:checked~.ham-menu .menuline {
+    transform: rotate(135deg);
+    transition: 0.3s ease;
+  }
+
+  .check:checked~.ham-menu .menuline::before,
+  .check:checked~.ham-menu .menuline::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
 }
