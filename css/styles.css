@@ -150,7 +150,7 @@ header {
 
 .news {
   background: #b9c4ce;
-  padding: 10px;
+  padding: 10px 25px 10px 0;
   margin: auto 15px;
 }
 
@@ -158,7 +158,7 @@ header {
   font-size: 2em;
   font-style: italic;
   text-transform: capitalize;
-  margin: 15px auto;
+  margin: 15px 0 15px 35px;
 }
 
 /* Product nav */
@@ -385,6 +385,10 @@ footer a:hover {
     padding: 20px;
   }
 
+  .menulist i {
+    padding-right: 10px;
+  }
+
   .check:checked~.menulist {
     right: 0;
   }
@@ -393,7 +397,7 @@ footer a:hover {
     display: none;
   }
 
-  .hamburger-menu i {
+  .hamburger-menu label {
     float: right;
     font-size: 2.5em;
     margin: 15px;
@@ -447,7 +451,7 @@ footer a:hover {
   }
 
   .news {
-    margin: 0 25px 0 0;
+    margin-right: 25px;
     max-height: 425px;
     overflow: auto;
   }
@@ -521,6 +525,10 @@ footer a:hover {
     padding: 20px;
   }
 
+  .menulist i {
+    padding-right: 10px;
+  }
+
   .check:checked~.menulist {
     right: 0;
   }
@@ -529,7 +537,7 @@ footer a:hover {
     display: none;
   }
 
-  .hamburger-menu i {
+  .hamburger-menu label {
     float: right;
     font-size: 3em;
     margin: 25px;
