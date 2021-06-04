@@ -317,7 +317,8 @@ footer a:hover {
   }
 
   footer {
-    grid-template-columns: 1fr auto;
+    display: flex;
+    justify-content: center;
   }
 
   .market {
@@ -472,7 +473,8 @@ footer a:hover {
   }
 
   footer {
-    grid-template-columns: auto 1fr;
+    display: flex;
+    justify-content: center;
   }
 
   /* Removed for tablet */
