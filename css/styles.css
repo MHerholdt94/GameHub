@@ -5,17 +5,23 @@ body {
   margin: auto;
 }
 
-ul {
-  list-style: none;
+h2 {
+  font-size: 2.5em;
 }
 
-a {
-  text-decoration: none;
+h3 {
+  font-size: 1.5em;
+  margin: auto;
+}
+
+ul {
+  list-style: none;
 }
 
 a,
 i {
   color: #1d2540;
+  text-decoration: none;
 }
 
 .cta {
@@ -29,6 +35,87 @@ i {
 
 input[type="text"] {
   min-width: 230px;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+/* Hamburger menu - This code is found in an article from march 4th 2021 on infoens.com (with some changes) */
+.menulist {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin-right: 0px;
+  background: #b9c4ce;
+  top: 60px;
+  padding-top: 50px;
+  text-align: center;
+  transition: 0.5s;
+  right: -120%;
+}
+
+.ham-menu {
+  display: block;
+}
+
+.menulist li a {
+  font-size: 22px;
+  text-align: center;
+}
+
+.menulist li {
+  padding: 20px;
+}
+
+.menulist i {
+  padding-right: 10px;
+}
+
+.check:checked~.menulist {
+  right: 0;
+}
+
+#hamburger__checkbox {
+  display: none;
+}
+
+.hamburger-menu label {
+  float: right;
+  font-size: 2.5em;
+  margin: 15px;
+}
+
+.check:checked~.ham-menu .menuline {
+  transform: rotate(135deg);
+  transition: 0.3s ease;
+}
+
+.check:checked~.ham-menu .menuline::before,
+.check:checked~.ham-menu .menuline::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Hover effects (desktop) */
+@media (min-width: 1481px) {
+  .visit:hover {
+    background: #8c6f23;
+  }
+
+  .product-nav a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #0d0d0d;
+    transition: 0.3s;
+  }
+
+  .product-nav a:hover::after {
+    width: 35%;
+    transition: 0.3s;
+  }
 }
 
 /* Header */
@@ -95,10 +182,6 @@ header {
   padding: 15px;
 }
 
-.hamburger-menu {
-  display: none;
-}
-
 /* Advertisement */
 .advert {
   display: grid;
@@ -115,7 +198,6 @@ header {
 }
 
 .market h2 {
-  font-size: 2.5em;
   max-width: 250px;
   color: #8c6f23;
   text-transform: uppercase;
@@ -134,7 +216,7 @@ header {
   left: 10px;
 }
 
-.market .visit {
+.visit {
   color: #fff;
   padding: 10px 20px;
   border: 4px solid #8c6f23;
@@ -144,10 +226,6 @@ header {
   float: right;
 }
 
-.visit:hover {
-  background: #8c6f23;
-}
-
 .news {
   background: #b9c4ce;
   padding: 10px 25px 10px 0;
@@ -155,17 +233,12 @@ header {
 }
 
 .news h2 {
-  font-size: 2em;
   font-style: italic;
   text-transform: capitalize;
   margin: 15px 0 15px 35px;
 }
 
 /* Product nav */
-div img {
-  max-width: 250px;
-}
-
 .product-nav {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -181,19 +254,6 @@ div img {
 .product-nav i {
   font-size: 2em;
   color: #0d0d0d;
-}
-
-.product-nav a::after {
-  content: "";
-  width: 0;
-  height: 2px;
-  background: #0d0d0d;
-  transition: 0.3s;
-}
-
-.product-nav a:hover::after {
-  width: 35%;
-  transition: 0.3s;
 }
 
 /* Product lists */
@@ -214,6 +274,10 @@ div img {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   margin: 50px auto;
+}
+
+div img {
+  max-width: 250px;
 }
 
 .product {
@@ -242,20 +306,12 @@ div img {
 
 /* Footer */
 footer {
-  display: grid;
-  grid-template-columns: repeat(7, auto);
+  display: flex;
+  justify-content: space-evenly;
   margin: 75px auto;
   padding-top: 25px;
   color: #b9c4ce;
   border-top: 1px solid #1d2540;
-}
-
-footer h3 {
-  text-transform: uppercase;
-}
-
-footer a {
-  color: #1d2540;
 }
 
 footer img {
@@ -295,10 +351,6 @@ footer a:hover {
     max-width: 100px;
   }
 
-  .product h2 {
-    margin: auto;
-  }
-
   .product .cta {
     display: inline;
     float: none;
@@ -330,8 +382,17 @@ footer a:hover {
     margin: 10px 0;
   }
 
-  /* Removed for mobile */
+  .copyright,
+  footer img {
+    display: block;
+    margin-left: 20px;
+  }
 
+  .hamburger-menu {
+    display: block;
+  }
+
+  /* Removed for mobile */
   .back,
   .search,
   .social-nav,
@@ -342,77 +403,6 @@ footer a:hover {
   .sale .price,
   footer p {
     display: none;
-  }
-
-  .copyright,
-  footer img {
-    display: block;
-    margin-left: 20px;
-  }
-
-  /* The hamburger menu code is found in an article from march 2021 on infoens.com (with a few changes) */
-  .hamburger-menu {
-    display: block;
-  }
-
-  .menulist {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    margin-right: 0px;
-    background: #b9c4ce;
-    top: 60px;
-    padding-top: 50px;
-    text-align: center;
-    transition: 0.5s;
-    right: -120%;
-  }
-
-  .ham-menu {
-    display: block;
-  }
-
-  .menulist {
-    display: block;
-    margin-right: 0px;
-  }
-
-  .menulist li a {
-    font-size: 22px;
-    text-align: center;
-  }
-
-  .menulist li {
-    padding: 20px;
-  }
-
-  .menulist i {
-    padding-right: 10px;
-  }
-
-  .check:checked~.menulist {
-    right: 0;
-  }
-
-  #hamburger__checkbox {
-    display: none;
-  }
-
-  .hamburger-menu label {
-    float: right;
-    font-size: 2.5em;
-    margin: 15px;
-  }
-
-  .check:checked~.ham-menu .menuline {
-    transform: rotate(135deg);
-    transition: 0.3s ease;
-  }
-
-  .check:checked~.ham-menu .menuline::before,
-  .check:checked~.ham-menu .menuline::after {
-    top: 0;
-    transform: rotate(90deg);
   }
 }
 
@@ -441,10 +431,6 @@ footer a:hover {
   .market {
     margin: 0 0 0 25px;
     max-height: 375px;
-  }
-
-  .market h2 {
-    max-width: 100%;
   }
 
   .market p {
@@ -491,68 +477,11 @@ footer a:hover {
     display: block;
   }
 
-  /* The hamburger menu code is found in an article from march 2021 on infoens.com (with a few changes) */
   .hamburger-menu {
     display: block;
   }
 
   .menulist {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    margin-right: 0px;
-    background: #b9c4ce;
     top: 120px;
-    padding-top: 50px;
-    text-align: center;
-    transition: 0.5s;
-    right: -120%;
-  }
-
-  .ham-menu {
-    display: block;
-  }
-
-  .menulist {
-    display: block;
-    margin-right: 0px;
-  }
-
-  .menulist li a {
-    font-size: 22px;
-    text-align: center;
-  }
-
-  .menulist li {
-    padding: 20px;
-  }
-
-  .menulist i {
-    padding-right: 10px;
-  }
-
-  .check:checked~.menulist {
-    right: 0;
-  }
-
-  #hamburger__checkbox {
-    display: none;
-  }
-
-  .hamburger-menu label {
-    float: right;
-    font-size: 3em;
-    margin: 25px;
-  }
-
-  .check:checked~.ham-menu .menuline {
-    transform: rotate(135deg);
-    transition: 0.3s ease;
-  }
-
-  .check:checked~.ham-menu .menuline::before,
-  .check:checked~.ham-menu .menuline::after {
-    top: 0;
-    transform: rotate(90deg);
   }
 }
