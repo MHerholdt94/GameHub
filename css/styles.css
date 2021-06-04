@@ -5,10 +5,6 @@ body {
   margin: auto;
 }
 
-h2 {
-  font-size: 2.5em;
-}
-
 h3 {
   font-size: 1.5em;
   margin: auto;
@@ -27,7 +23,7 @@ i {
 .cta {
   background: #8c6f23;
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px 15px;
   font-size: 1.1em;
   border-radius: 10px;
   box-shadow: 0px 3px 1px #6e571a;
@@ -185,7 +181,7 @@ header {
 /* Advertisement */
 .advert {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto 1fr;
   grid-gap: 25px;
   margin-top: 20px;
 }
@@ -202,12 +198,13 @@ header {
   color: #8c6f23;
   text-transform: uppercase;
   margin: auto 15px;
+  font-size: 2.5em;
 }
 
 .market p {
   font-size: 1.5em;
   color: #8c6f23;
-  margin: auto 15px;
+  margin: 10px 15px;
 }
 
 .market i {
@@ -228,13 +225,16 @@ header {
 
 .news {
   background: #b9c4ce;
-  padding: 10px 25px 10px 0;
-  margin: auto 15px;
+  padding-right: 25px;
+  min-width: 190px;
+  max-height: 300px;
+  overflow: auto;
 }
 
 .news h2 {
   font-style: italic;
   text-transform: capitalize;
+  border-bottom: 1px solid black;
   margin: 15px 0 15px 35px;
 }
 
@@ -275,6 +275,7 @@ header {
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
+  margin-left: 50px;
 }
 
 div img {
@@ -333,9 +334,12 @@ footer a:hover {
   }
 
   header {
+    position: sticky;
+    top: 0;
     background: #b9c4ce;
     margin: auto;
     height: 80px;
+    box-shadow: 0px 0px 5px #000000;
   }
 
   .product__header {
@@ -352,6 +356,7 @@ footer a:hover {
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
+    margin: 15px 0;
   }
 
   .product {
@@ -367,7 +372,7 @@ footer a:hover {
 
   .product .cta {
     display: inline;
-    padding: 5px 13px;
+    padding: 5px 15px;
   }
 
   .product span {
@@ -377,6 +382,7 @@ footer a:hover {
   footer {
     display: flex;
     justify-content: center;
+    margin: 10px 0;
   }
 
   .market {
@@ -438,17 +444,11 @@ footer a:hover {
     margin: 27px auto;
   }
 
-  .market {
-    margin: 0 0 0 25px;
-    max-height: 375px;
-  }
-
   .market p {
     margin: 25px 15px;
   }
 
   .news {
-    margin-right: 25px;
     max-height: 425px;
     overflow: auto;
   }
