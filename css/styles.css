@@ -241,8 +241,7 @@ header {
 }
 
 .news p {
-  position: relative;
-  right: 25px;
+  margin: 20px 0 0 15px;
 }
 
 /* Product nav */
@@ -370,7 +369,7 @@ footer a:hover {
     font-size: 12px;
     padding: 10px;
     margin: auto;
-    max-width: 125px;
+    max-width: 126px;
   }
 
   .product img {
