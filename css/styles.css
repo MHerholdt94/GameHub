@@ -369,27 +369,28 @@ footer a:hover {
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin: 15px 0;
+    margin: auto;
+    width: 75%;
   }
 
   .product {
-    font-size: 12px;
+    font-size: 15px;
     padding: 10px;
     margin: auto;
     max-width: 126px;
   }
 
   .product img {
-    max-width: 125px;
+    max-width: 170px;
+  }
+
+  .product h4 {
+    margin: 5px auto;
   }
 
   .product .cta {
     display: inline;
     padding: 5px 15px;
-  }
-
-  .product span {
-    font-size: 20px;
   }
 
   footer {
@@ -400,7 +401,7 @@ footer a:hover {
 
   .market {
     margin: 0 0 25px 25px;
-    font-size: 0.7em;
+    font-size: 1em;
   }
 
   .market p {
@@ -426,7 +427,8 @@ footer a:hover {
   .navigation,
   .product-nav,
   .sale .price,
-  footer p {
+  footer p,
+  .product p {
     display: none;
   }
 }
@@ -465,15 +467,17 @@ footer a:hover {
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
+    gap: 25px;
   }
 
   .product img {
-    max-width: 180px;
+    max-width: 220px;
   }
 
   .product {
     max-width: 180px;
     margin: 15px;
+    font-size: 1.1em;
   }
 
   footer {
@@ -529,6 +533,14 @@ footer a:hover {
 
 /* Tablet, searchbar removed */
 @media (min-width: 601px) and (max-width: 759px) {
+  body {
+    max-width: 100%;
+  }
+
+  .menulist {
+    top: 84px;
+  }
+
   .search {
     display: none;
   }
