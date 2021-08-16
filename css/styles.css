@@ -6,23 +6,19 @@ body {
 }
 
 h1 {
-  max-width: 250px;
-  color: #8c6f23;
-  text-transform: uppercase;
-  margin: auto 15px;
-  font-size: 2.5em;
+  font-size: 3em;
 }
 
 h2 {
-  font-style: italic;
-  text-transform: capitalize;
-  border-bottom: 1px solid black;
-  margin: auto 15px;
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.75em;
 }
 
 h4 {
-  font-size: 1.5em;
-  margin: auto;
+  font-size: 1.6em;
 }
 
 ul {
@@ -39,7 +35,6 @@ i {
   background: #8c6f23;
   color: #fff;
   padding: 10px 15px;
-  font-size: 1.1em;
   border-radius: 10px;
   box-shadow: 0px 3px 1px #6e571a;
 }
@@ -153,7 +148,6 @@ header {
   padding: 10px 150px 10px 10px;
   border-width: 2px;
   font-family: "europa", Arial, Helvetica, sans-serif;
-  font-size: 1em;
 }
 
 .navigation,
@@ -161,7 +155,6 @@ header {
   display: grid;
   grid-template-columns: repeat(5, auto);
   grid-gap: 25px;
-  font-size: 1.1em;
 }
 
 .navigation i {
@@ -182,7 +175,6 @@ header {
   display: grid;
   grid-template-columns: repeat(3, auto) 1fr;
   grid-gap: 15px;
-  font-size: 2em;
   padding-left: 0px;
   margin-top: 15px;
 }
@@ -209,22 +201,24 @@ header {
 }
 
 .market {
-  background: #1d2540;
+  background-image: url("../images/Universe2.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
   border: 10px solid #8c6f23;
-  padding: 15px;
-  margin: 0 auto;
+  width: 1070px;
+  height: 360px;
+  text-align: center;
+}
+
+.market h1 {
+  color: #fff;
+  margin: 75px 0 0 0;
 }
 
 .market p {
-  font-size: 1.5em;
-  color: #8c6f23;
-  margin: 10px 15px;
-}
-
-.market i {
   color: #fff;
-  position: relative;
-  left: 10px;
+  margin: 0 0 35px 0;
+  font-size: 26px;
 }
 
 .visit {
@@ -232,9 +226,13 @@ header {
   padding: 10px 20px;
   border: 4px solid #8c6f23;
   border-radius: 10px;
-  font-size: 1.2em;
   text-transform: uppercase;
-  float: right;
+}
+
+.visit i {
+  color: #fff;
+  position: relative;
+  left: 10px;
 }
 
 .news {
@@ -247,6 +245,12 @@ header {
   max-height: 360px;
 }
 
+.news h2 {
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+  margin: auto 15px;
+}
+
 .news p {
   margin: 20px 0 0 15px;
 }
@@ -256,7 +260,6 @@ header {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   margin: 100px auto;
-  font-size: 1.3em;
 }
 
 .product-nav a {
@@ -275,8 +278,8 @@ header {
   color: #fff;
   text-align: center;
   padding: 10px;
-  text-transform: uppercase;
   box-shadow: 0px 3px 2px #b9c4ce;
+  text-transform: uppercase;
 }
 
 .sale__header {
@@ -301,18 +304,16 @@ div img {
   padding: 0 10px;
 }
 
-.price {
-  font-size: 1.8em;
+.product h4 {
+  margin: auto;
 }
 
 .sale .price {
   text-decoration: line-through;
-  font-size: 1.1em;
   margin-left: 10px;
 }
 
 .sale__price {
-  font-size: 1.8em;
   color: red;
 }
 
@@ -374,7 +375,6 @@ footer a:hover {
   }
 
   .product {
-    font-size: 15px;
     padding: 10px;
     margin: auto;
     max-width: 126px;
@@ -401,7 +401,6 @@ footer a:hover {
 
   .market {
     margin: 0 0 25px 25px;
-    font-size: 1em;
   }
 
   .market p {
@@ -477,7 +476,6 @@ footer a:hover {
   .product {
     max-width: 180px;
     margin: 15px;
-    font-size: 1.1em;
   }
 
   footer {
