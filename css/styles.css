@@ -110,14 +110,6 @@ input[type="text"] {
   .visit:hover {
     background: #8c6f23;
     box-shadow: #6e581ac0 -2px 2px, #6e581aa0 -4px 4px, #6e581a80 -6px 6px, #6e581a60 -8px 8px;
-    animation-name: cta_anim;
-    animation-duration: 0.3s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: both;
-  }
-
-  .visit::after {
-    animation-name: cta_anim_out;
   }
 
   .product-nav a::after {
@@ -217,10 +209,10 @@ header {
 .market {
   background-image: url("../images/Universe3.jpeg");
   background-size: cover;
-  background-repeat: round;
-  border: 10px solid #8c6f23;
+  background-position: center;
+  border: 3px solid #8c6f23;
   width: 1070px;
-  height: 360px;
+  height: 377px;
   text-align: center;
 }
 
@@ -258,23 +250,6 @@ header {
   font-size: 1.75em;
   transition-duration: 0.3s;
   position: relative;
-}
-
-@keyframes cta_anim {
-  0% {
-    bottom: 0px;
-    left: 0px;
-  }
-
-  50% {
-    bottom: 2px;
-    left: 2px;
-  }
-
-  100% {
-    bottom: 4px;
-    left: 4px;
-  }
 }
 
 .visit i {
@@ -357,13 +332,19 @@ div img {
   margin: auto;
 }
 
+.price {
+  font-size: 1.6em;
+}
+
 .sale .price {
   text-decoration: line-through;
   margin-left: 10px;
+  font-size: 1em;
 }
 
 .sale__price {
   color: red;
+  font-size: 1.6em;
 }
 
 .featured .cta {
